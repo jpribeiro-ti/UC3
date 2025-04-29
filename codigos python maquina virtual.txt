@@ -1,0 +1,8 @@
+
+https://dontpad.com/python2025NI
+
+python -m venv marquinavirtual1 - Instalando máquina virtual
+maquinavirtual1\Scripts\activate - Ativando a máquina virtual
+deactive - Fechar a máquina virtual
+pip freeze > requirements.txt - Congelar as extensões instaladas
+pip install -r requirements.txt - Instalar as extensões congeladas
