@@ -1,0 +1,51 @@
+##Cada numeração corresponde a um programa diferente para que seja desenvolvido. As atividades seguem abaixo:
+
+#1.Filtre produtos com preço > 1000 usando list comprehension;
+
+#Criando o dicionário
+lojavirtual = [
+    {"nome": "Celular", "preco": 1500},
+    {"nome": "Computador", "preco": 2000},
+    {"nome": "Tablet", "preco": 1000},
+    {"nome": "Drone", "preco": 2200}
+]
+
+#filtrar os produtos com preço maior que 1000
+produtos_acima_1000 = [produto for produto in lojavirtual if produto["preco"] > 1000]
+produtos_abaixo_1000 = [produto for produto in lojavirtual if produto["preco"] <= 1000]
+
+
+
+
+
+#4.Uma empresa contratou seus serviços para armazenar dados de colaboradores em memória e realizar operações como:
+
+colaboradores = {}
+
+def adicionar_colaborador(id, nome, salario, horario_trabalho):
+    colaboradores[id] = {"nome": nome, "salario": salario, "horario_trabalho": horario_trabalho}
+
+def buscar_colaborador_por_id(id):
+    return colaboradores.get(id, "Colaborador não encontrado.")
+
+def listar_colaboradores_com_salario_acima(de_valor):
+    return [colaborador for colaborador in colaboradores.values() if colaborador["salario"] > 3000]
+
+def listar_colaboradores_com_horario(horario):
+    return [colaborador for colaborador in colaboradores.values() if colaborador["horario_trabalho"] == "08:00 - 18:00"]
+
+
+# Adicionando colaboradores
+adicionar_colaborador(1, "Alice", 3000, "08:00 - 17:00")
+adicionar_colaborador(2, "Bob", 2000,  "08:00 - 13:00")
+adicionar_colaborador(3, "Carlos", 4000, "08:00 - 18:00")
+
+
+
+print(buscar_colaborador_por_id(2))
+
+colaboradores_acima_2500 = listar_colaboradores_com_salario_acima(2500)
+print(colaboradores_acima_2500)
+
+colaboradores_horario_08as18 = listar_colaboradores_com_horario("08:00 - 18:00")
+print(colaboradores_horario_08as18)
